@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  jupyter-lab:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../:/review_classification_project
+    environment:
+      - AWS_ACCESS_KEY_ID
+      - AWS_SECRET_ACCESS_KEY
+      - AWS_DEFAULT_REGION
+      - HUGGINGFACE_TOKEN   
